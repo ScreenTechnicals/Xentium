@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Fira Sans";
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+:root {
+  --fontcolor: deeppink;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.253);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 22px;
+  z-index: 100000;
+}
+
+header .logo {
+  margin-left: 50px;
+}
+
+header .logo h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+header .logo h1 span {
+  color: var(--fontcolor);
+  font-size: 45px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+
+header nav ul li {
+  margin: 10px;
+}
+
+header nav ul li a {
+  text-transform: capitalize;
+  color: #fff;
+  position: relative;
+  padding: 10px;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--fontcolor);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header nav ul li a:hover::after {
+  width: 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header .toggler {
+  cursor: pointer;
+  padding: 20px;
+  display: none;
+  z-index: 30000;
+}
+
+header .toggler .bars {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url(b&w.jpg) no-repeat;
+  background-position: 70% 0;
+  background-size: cover;
+}
+
+.banner .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.banner .content .line-dec {
+  margin-top: 200px;
+  margin-bottom: 60px;
+  width: 80px;
+  height: 4px;
+  background: var(--fontcolor);
+  margin-left: 50px;
+}
+
+.banner .content .text h1 {
+  color: #fff;
+  margin-left: 50px;
+  font-size: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 700px;
+}
+
+.banner .btn {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.banner .btn .btn-a {
+  position: relative;
+  background-color: #000;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 50px;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.banner .btn .btn-a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: var(--fontcolor);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.banner .btn .btn-a:hover:before {
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.banner .btn .btn-a a {
+  z-index: 1000;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+.cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards #card1 {
+  background-color: var(--fontcolor);
+  color: #fff;
+}
+
+.cards #card1 .icon #icon1 {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cards #card1 h1 {
+  color: #fff;
+}
+
+.cards #card1 .line-dec2 {
+  background-color: #fff;
+}
+
+.cards .card {
+  margin: 20px;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #0f0f0f;
+  width: 400px;
+}
+
+.cards .card .icon {
+  margin: 30px;
+}
+
+.cards .card .icon i {
+  font-size: 50px;
+  padding: 7px;
+  text-shadow: 0 0 5px #fff;
+}
+
+.cards .card .heading {
+  margin: 20px;
+}
+
+.cards .card .heading h1 {
+  font-size: 40px;
+  color: var(--fontcolor);
+  text-shadow: 0 0 5px var(--fontcolor);
+}
+
+.cards .card .heading .line-dec2 {
+  width: 70px;
+  height: 2px;
+  background-color: var(--fontcolor);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.cards .card .para {
+  padding: 10px 20px;
+  margin-bottom: 50px;
+}
+
+.cards .card:hover {
+  background-color: var(--fontcolor);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.cards .card:hover i, .cards .card:hover h1 {
+  color: #000;
+}
+
+.cards .card:hover .line-dec2 {
+  background-color: #000;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media only screen and (max-width: 970px) {
+  header nav {
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #000;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+  }
+  header nav ul li {
+    text-align: center;
+  }
+  header nav ul li a {
+    font-size: 30px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  header nav ul li a::after {
+    display: none;
+  }
+  header nav ul li a:hover {
+    color: var(--fontcolor);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  header nav ul li a i {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  header nav ul li a i:hover {
+    color: var(--fontcolor);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  header .toggler {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .banner .content .text h1 {
+    width: auto;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .banner {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(b&w.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(b&w.jpg) no-repeat;
+    background-position: 70% 0;
+    background-size: cover;
+  }
+  .banner .content .text h1 {
+    width: auto;
+    font-size: 35px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

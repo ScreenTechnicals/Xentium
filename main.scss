@@ -1,0 +1,304 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans";
+  color: #fff;
+}
+body {
+  background-color: #000;
+}
+:root {
+  --fontcolor: deeppink;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.253);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 22px;
+  z-index: 100000;
+
+  .logo {
+    margin-left: 50px;
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 35px;
+
+      span {
+        color: var(--fontcolor);
+        font-size: 45px;
+      }
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      margin-right: 20px;
+      li {
+        margin: 10px;
+        a {
+          text-transform: capitalize;
+          color: #fff;
+          position: relative;
+          padding: 10px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--fontcolor);
+            transition: all 0.5s ease;
+          }
+          &:hover::after {
+            width: 50%;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+  .toggler {
+    cursor: pointer;
+    padding: 20px;
+    display: none;
+    z-index: 30000;
+    .bars {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px;
+      transition: all 0.6s ease;
+    }
+  }
+}
+
+// Home Banner
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url(b&w.jpg) no-repeat;
+  background-position: 70% 0;
+  background-size: cover;
+  //   background-attachment: fixed;
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+
+    .line-dec {
+      margin-top: 200px;
+      margin-bottom: 60px;
+      width: 80px;
+      height: 4px;
+      background: var(--fontcolor);
+      margin-left: 50px;
+    }
+    .text {
+      h1 {
+        color: #fff;
+        margin-left: 50px;
+        font-size: 70px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 700px;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    margin-top: 50px;
+
+    .btn-a {
+      position: relative;
+      background-color: #000;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // padding: 20px 30px;
+      margin: 20px 50px;
+      border: 2px solid #fff;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-color: var(--fontcolor);
+        transition: all 0.5s ease;
+      }
+      &:hover:before {
+        width: 100%;
+        transition: all 0.5s ease;
+      }
+      a {
+        z-index: 1000;
+        padding: 20px 30px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// cards
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  #card1 {
+    background-color: var(--fontcolor);
+    color: #fff;
+    .icon {
+      #icon1 {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+    }
+    h1 {
+      color: #fff;
+    }
+    .line-dec2 {
+      background-color: #fff;
+    }
+  }
+  .card {
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: rgb(15, 15, 15);
+    width: 400px;
+    .icon {
+      margin: 30px;
+      i {
+        font-size: 50px;
+        padding: 7px;
+        text-shadow: 0 0 5px #fff;
+      }
+    }
+    .heading {
+      margin: 20px;
+      h1 {
+        font-size: 40px;
+        color: var(--fontcolor);
+        text-shadow: 0 0 5px var(--fontcolor);
+      }
+      .line-dec2 {
+        width: 70px;
+        height: 2px;
+        background-color: var(--fontcolor);
+        transition: all .5s ease;
+      }
+    }
+    .para {
+      padding: 10px 20px;
+      margin-bottom: 50px;
+    }
+    &:hover{
+      background-color: var(--fontcolor);
+      transition: all .5s ease;
+    }
+    &:hover i, &:hover h1{
+      color: #000;
+    }
+    &:hover .line-dec2{
+      background-color: #000;
+      transition: all .5s ease;
+    }
+  }
+}
+
+// Responsive
+// 970px
+@media only screen and (max-width: 970px) {
+  header {
+    nav {
+      width: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      background-color: #000;
+      transition: all 0.6s ease;
+      ul {
+        flex-direction: column;
+        margin-top: 100px;
+        li {
+          text-align: center;
+          a {
+            font-size: 30px;
+            transition: all 0.5s ease;
+            &::after {
+              display: none;
+            }
+            &:hover {
+              color: var(--fontcolor);
+              transition: all 0.5s ease;
+            }
+            i {
+              transition: all 0.5s ease;
+            }
+            i:hover {
+              color: var(--fontcolor);
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+    .toggler {
+      display: block;
+    }
+  }
+}
+// 760px
+@media only screen and (max-width: 760px) {
+  .banner {
+    .content {
+      .text {
+        h1 {
+          width: auto;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+// 450px
+@media only screen and (max-width: 450px) {
+  .banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(b&w.jpg) no-repeat;
+    background-position: 70% 0;
+    background-size: cover;
+    .content {
+      .text {
+        h1 {
+          width: auto;
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
